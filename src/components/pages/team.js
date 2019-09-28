@@ -3,8 +3,6 @@ import axios from 'axios';
 import {ModeContext} from '../../project_mode';
 
 function Team() {
-
-  
   const [data, setData] = useState([]);
   const mode = useContext(ModeContext)
 
@@ -17,18 +15,36 @@ function Team() {
   fetchData();
   }, []);
 
-
   return (
-    <div className="Team">
-        <h1>Team</h1>
-        <ul>
-        {data.map(team => (
-          <li key={team.id}>
-            <a href={team.id}>{team.full_name} - {team.designation}</a>
-            <img src={team.image} alt={team.full_name}/>
-          </li>
-        ))}
-      </ul>
+    <div className="Team" id="Team">
+      <div className="page5 contain pg2">
+            <div className="page5-title-container">
+                <div className="page5-title">OUR TEAM</div>
+                <div className="page5-sub-title">Teamwork builds trust and trust builds growth</div>
+            </div>
+            <div className="page5-content-container">
+                <div className="page5-content-text">We are a team of innovate minds incorperated together to innovate
+                    something disruptive. Always looking forward to learning something new and investing our time in
+                    most effective and efficient way. We are what our clients need us to be.</div>
+                <div className="page5-content-team-grid">
+                    {
+                      data.map(
+                        team => (
+                          <div key={team.id} className="page5-content-team-child">
+                            <div className="page5-team-image-container">
+                                <img className="page5-team-image" alt={team.full_name} src={team.image}/>
+                            </div>
+                            <div className="page5-team-title-container">
+                                <div className="page5-team-name">{team.full_name}</div>
+                                <div className="page5-team-title">{team.designation}</div>
+                            </div>
+                        </div>
+                        )
+                      )
+                    }
+                </div>
+            </div>
+        </div>
     </div>
   );
 }

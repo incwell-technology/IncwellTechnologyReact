@@ -5,13 +5,16 @@ import Footer from './components/partials/footer';
 import Body from './components/body';
 import {ModeProvider} from './project_mode';
 
+
 function App() {
   return (
     <ModeProvider>
-      <div className="App">
-        <Navbar/>
-          <Body/>
-        <Footer/>
+      <div className="main-container">
+        <div className="App">
+          <Navbar/>
+            <Body/>
+          <Footer/>
+        </div>
       </div>
     </ModeProvider>
   );

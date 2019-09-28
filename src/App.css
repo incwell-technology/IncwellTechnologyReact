@@ -1,0 +1,350 @@
+.navbar-brand {
+    float: left;
+    height: fit-content;
+}
+.main-container{
+
+}
+.contain
+{
+    width: 980px;  
+    margin: 0 auto;
+    
+}
+.contain-nav{
+    position: relative;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    color: #24a9f3;
+    background-color: transparent;
+}
+.nav>li>a:focus, .nav>li>a {
+    text-decoration: none;
+    color: gray;
+    background-color: transparent;
+}
+.navbar {
+    border-radius: unset;
+    margin-bottom: unset; 
+    border-bottom: 1px solid #24a9f3;
+}
+.navbar-right {
+    float: unset;
+    margin-right: unset;
+    position: absolute;
+    right: 0;
+    top: unset;
+    bottom: 40%;
+    
+}
+.navbar-nav>li>a {
+    padding-top: unset;
+    padding-bottom: unset;
+}
+.logo{
+    height: 64px;
+}
+.page1
+{
+    position: relative;
+    height:500px;
+}
+.page1-background
+{
+    width: 100%;
+    position: absolute;
+    display: grid;
+    grid-template-columns:45% 45%;
+    grid-column-gap: 10%; 
+    z-index: 0;
+}
+.page1-bg-left{
+    
+
+}
+.page1-bg-right{
+    
+}
+.left-img-pg1{
+        width: 64%;
+    float: left;
+    padding-top: 40px;
+}
+.right-img-pg1{
+    width: 90%;
+    float: right;
+}
+.page1-container
+{
+    padding-top: 128px;
+    width: 64%;
+    position: relative;
+}
+.page1-tile
+{
+    font-size: 44px;
+    font-weight: bold;
+    line-height: 42px;
+}
+.page1-content{
+    font-size: 16px;
+    padding: 20px 0;
+
+}
+.page1-button{
+    width: fit-content;
+    background: #3bbbf5;
+    padding: 10px;
+    color: #fff;
+    font-size: 16px;
+
+}
+.pg2{
+    width: 60%;
+    position: relative;
+    z-index: 1;
+}
+.page2
+{
+    padding-top: 20px;
+    padding-bottom: 50px;
+    background: #24a9f3;
+    color: #fff;
+    text-align: center;
+}
+.page2-title
+{
+    font-size: 32px;
+    font-weight: bold;
+}
+.page2-content
+{
+    font-size: 16px;
+    padding: 20px 0;
+    
+}
+.page2-values
+{
+    font-size: 17px;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+.page2-pics
+{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-column-gap: 5%;
+    font-size: 20px;
+    font-weight: bold;
+}
+.page2-grid-child{
+    background: transparent;
+    position: relative;
+        height: 174px;
+
+}
+.page2-grid-image{
+    width: 100%;
+    opacity: 0.655;
+    position: absolute;
+    left: 0;
+
+}
+.page2-grid-texts{
+    position: relative;
+    top: 40%;
+
+}
+.page3
+{
+    overflow: hidden;
+}
+.page3-title
+{
+    font-size: 32px;
+    color: #24a9f3;
+    text-align: center;
+    padding: 50px;
+}
+.page3-grid-parent
+{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-column-gap: 5%;
+}
+.page3-grid-child
+{
+        border: 1px solid #9E9E9E;
+    padding-bottom: 15px;
+    background: #fff;
+}
+.page3-grid-child-image
+{}
+.page3-grid-child-img{
+    width: 100%;
+}
+.page3-grid-child-content
+{
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    /* padding: 10px; */
+    grid-template-columns: 20% 75%;
+    grid-column-gap: 5%;
+}
+.page3-grid-child-title
+{
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+        
+}
+.page3-grid-child-text
+{}
+.page3-background-img-container
+{
+    position: relative;
+        left: 140px;
+    top: -40px;
+    z-index: 0;
+}
+.page4{
+    display: none;
+    text-align: center;
+
+}
+.page4-title{
+    text-align: center;
+    font-size: 32px;
+    color: #24a9f3;
+}
+.page4-tree-grid{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    
+
+}
+.page4-grid-child{
+    position: relative;
+
+}
+.page4-child-img-container{
+    position: absolute;
+
+
+}
+.page4-child-content-container{
+    position: relative;
+
+}
+.page4-child-title{
+
+}
+.page4-child-text{
+
+}
+.page4-child-img{
+    width: 100%;
+
+}
+.page5{
+    text-align: center;
+    padding: 100px 0;
+}
+.page5-title-container{}
+.page5-title{
+    font-size: 32px;
+    color: #24a9f3;
+    font-weight: bold;
+}
+.page5-sub-title{
+    font-weight: bold;
+    font-size: 16px;
+}
+.page5-content-container{}
+.page5-content-text{
+    width: 60%;
+    margin: 10px auto;
+}
+.page5-content-team-grid{
+    display: grid;
+    grid-template-columns: 22% 22% 22% 22%;
+    grid-column-gap: 4%;
+
+}
+.page5-content-team-child{}
+.page5-team-image-container{
+    border-radius: 50%;
+    overflow: hidden;
+}
+.page5-team-image{
+    width: 100%;
+}
+.page5-team-title-container{}
+.page5-team-name{
+    color: #24a9f3;
+    font-weight: bold;
+}
+.page5-team-title{}
+.page6{
+    display: none;
+}
+.page7{
+width: 60%;
+    margin: 30px auto;
+}
+.page7-video{
+    width: 100%;
+    
+}   
+.page8{
+    padding-bottom: 50px;
+    background: #72c4f07c;
+}
+.page8-title{
+    padding: 20px;
+    font-size: 32px;
+    color: #24a9f3;
+    text-align: center;
+}
+.page8-grid{
+    display: grid;
+    grid-template-columns: 22% 22% 22% 22%;
+    grid-column-gap: 4%;  
+    grid-row-gap: 20px;  
+}
+.page8-grid-child{
+
+}
+.page8-grid-img-container{}
+.page8-grid-img{
+    width: 100%;
+}
+.footer{
+    background: #3bbbf5;
+    color: #fff;
+    padding-top: 20px;
+
+}
+.footer-grid{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-column-gap: 5%;
+}
+.footer-col-1{}
+.footer-logo{
+    height: 64px;
+}
+.footer-col-3 ul{
+    list-style: none;
+
+}
+.footer-col-2{}
+.footer-col-3{}
+.footer-navigation{}
+.footer-social{}
+.footer-last{
+    text-align: center;
+    padding: 25px;
+}

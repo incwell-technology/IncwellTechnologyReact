@@ -10,23 +10,32 @@ function Portfolio() {
   useEffect(() => {
     const fetchData = async () => {
      await axios.get(mode+"/api/v1/portfolio")
-      .then(res => setData(res.data.data))
+      .then(res => console.log(res.data.data))
       .catch((err) => console.log('Error in teams'+err))
     };
   fetchData();
   }, []);
 
   return (
-    <div className="Portfolio">
-        <h1>Portfolio</h1>
-        <ul>
-          {data.map(portfolio => (
-            <li key={portfolio.id}>
-              <a href={portfolio.id}>{portfolio.link}</a>
-              <img src={portfolio.image} alt={portfolio.link}/>
-            </li>
-            ))}
-          </ul>
+    <div className="Portfolio" id="Portfolio">
+          {/* <div className="page8">
+            <div className="contain pg2">
+                <div className="page8-title">OUR REMARKABLE WORKS</div>
+                <div className="page8-grid">
+                  {
+                    data.map(portfolio => (
+
+                      <div key={portfolio.id} className="page8-grid-child">
+                          <div className="page8-grid-img-container">
+                              <img className="page8-grid-img" src={portfolio.image}/>
+                          </div>
+                      </div>
+                    ))
+                  }
+
+                </div>
+            </div>
+        </div> */}
     </div>
   );
 }
