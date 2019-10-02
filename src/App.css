@@ -1,13 +1,15 @@
 .navbar-brand {
     float: left;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
 }
 .main-container{
-
+    max-width: 1920px;
 }
 .contain
 {
-    width: 980px;  
+    max-width: 980px; 
     margin: 0 auto;
     
 }
@@ -36,7 +38,6 @@
     right: 0;
     top: unset;
     bottom: 40%;
-    
 }
 .navbar-nav>li>a {
     padding-top: unset;
@@ -93,12 +94,13 @@
 
 }
 .page1-button{
-    width: fit-content;
+    width:-webkit-fit-content;
+    width:-moz-fit-content;
+    width:fit-content;
     background: #3bbbf5;
     padding: 10px;
     color: #fff;
     font-size: 16px;
-
 }
 .pg2{
     width: 60%;
@@ -205,7 +207,7 @@
 .page3-background-img-container
 {
     position: relative;
-        left: 140px;
+    left: 360px;
     top: -40px;
     z-index: 0;
 }
@@ -269,7 +271,8 @@
 }
 .page5-content-team-grid{
     display: grid;
-    grid-template-columns: 22% 22% 22% 22%;
+    /* grid-template-columns: 22% 22% 22% 22%; */
+    grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 4%;
 
 }
@@ -310,7 +313,8 @@ width: 60%;
 }
 .page8-grid{
     display: grid;
-    grid-template-columns: 22% 22% 22% 22%;
+    /* grid-template-columns: 22% 22% 22% 22%; */
+    grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 4%;  
     grid-row-gap: 20px;  
 }
@@ -329,7 +333,8 @@ width: 60%;
 }
 .footer-grid{
     display: grid;
-    grid-template-columns: 30% 30% 30%;
+    /* grid-template-columns: 30% 30% 30%; */
+    grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 5%;
 }
 .footer-col-1{}
@@ -347,4 +352,158 @@ width: 60%;
 .footer-last{
     text-align: center;
     padding: 25px;
+}
+
+.icon-bar {
+    background-color: #03a9f3;
+    width: 21px !important;
+    height: 3px !important;
+    margin: 0.4rem 0;
+}
+
+
+
+
+@media (max-width: 1919px) {
+    .page3-background-img-container {
+        left: 140px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 800px) {
+    .page3-background-img-container {
+        left: -77px;
+    }
+    .page3-background-img-container img{
+        width: 70rem;
+    }
+}
+
+@media (max-width: 980px) {
+    .right-img-pg1 {
+        width: 80%;
+        margin-top: 80px;
+    }
+    .page1-container {
+        padding-left: 20px;
+    }
+    .pg2 {
+        width: 80%;
+    }
+    .page2-grid-child {
+        height: 17vw;
+    }
+    .page1-background {
+        overflow: hidden;
+    }
+    .page8-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .page1 {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .left-img-pg1 {
+        /* width: unset; */
+        width: 95vw;
+        max-width: 40rem;
+    }
+    .page1-container {
+        width: 90%;
+        margin: 0 auto;
+        padding-left: 0;
+    }
+    .page1-background {
+        margin-top: 4rem;
+    }
+    .page1-tile {
+        font-size: 34px;
+    }
+    .page1-bg-right {
+        display: none;
+    }
+    .page3-grid-parent {
+        display: unset;
+    }
+    .page3-grid-child {
+        margin-bottom: 2.5rem;
+    }
+    .page3-background-img-container {
+        display: none;
+    }
+    .page5-content-team-child {
+        grid-column: span 2;
+    }
+    .page5-sub-title {
+        line-height: 16px;
+        margin-top: 1em;
+    }
+    .page8-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 90%;
+    }
+    .footer-col-1 {
+        grid-column: span 2;
+        margin-bottom: 1.5rem;
+    }
+    .page2-pics {
+        display: block;
+    }
+    .page2-values {
+        font-size: 2.3rem;
+    }
+    .page2-grid-child {
+        height: 12rem;
+        overflow: hidden;
+        margin-bottom: 3rem;
+    }
+    .navbar-toggle {
+        margin-top: 2rem;
+    }
+    .page5-content-text {
+        line-height: 16px;
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+    .page5-team-title {
+        margin-bottom: 2rem;
+    }
+    .main-container {
+        position: absolute;
+        transition: all 0.5s;
+    }
+    .navbar-nav {
+        /* position: absolute; */
+        top: 0;
+        background: #848484;
+        height: 100vh;
+        margin-top: -1px;
+        right: -14rem;
+        position: fixed;
+        width: 14rem;
+        transition: all 0.5s;
+    }
+    .navbar-nav>li>a {
+        color: #fff;
+    }
+    .navbar-nav>li>a:focus,
+    .navbar-nav>li>a:hover {
+        color: #03a9f3;
+    }
+    .navlist{
+        margin-top: 3rem;
+    }
+    .page5-sub-title {
+        margin-bottom: 2rem;
+    }
+    .page5-content-text {
+        text-align: justify;
+    }
+    
 }
