@@ -58,7 +58,8 @@ let vi = async =>
     
     let collapsed = true;
     
-    const dismissNavbar = () => {
+    const dismissNavbar = (e) => {
+        e.stopPropagation(); 
         navbarNav.style.right = '-14rem';
         mainContainer.style.right = '0';
         navibar.style.right = '0';
@@ -77,7 +78,8 @@ let vi = async =>
     //     }
     // };
     
-    navbarToggle.addEventListener('click', () => {
+    navbarToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
         if (collapsed) {
             navbarNav.style.right = '0';
             mainContainer.style.right = '14rem';
@@ -85,7 +87,7 @@ let vi = async =>
             collapsed = false;
             console.log(collapsed)
         } else {
-            dismissNavbar();
+            dismissNavbar(e);
         }
     }, false);
     
@@ -98,15 +100,17 @@ let vi = async =>
     // });
     
     navLinks.forEach(navlink => {
-        navlink.addEventListener('click', dismissNavbar, false);
+        navlink.addEventListener('click', (e) => {
+            dismissNavbar(e);
+        }, false);
     });
     
     
     
     mainContainer.addEventListener('click', (e) => {
         const isNavButton = e.target.classList.value == 'icon-bar' || e.target.classList.value == 'navbar-toggle';
-        if (!collapsed && !isNavButton) {
-            dismissNavbar();
+        if (!collapsed) {
+            dismissNavbar(e);
         }
     }, false);
     
