@@ -492,6 +492,7 @@ width: 60%;
     .navibar {
         position: fixed;
         right: 0;
+        top:0;
         width: 100%;
         background-color: #fff;
         z-index: 100;
