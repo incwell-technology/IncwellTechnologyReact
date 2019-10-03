@@ -12,11 +12,13 @@
     "react-hook-form": "^3.17.4",
     "react-scripts": "3.0.1"
   },
-  "scripts": {
-    "start": "react-scripts start",
+ "homepage": "https://tech.incwell.com.np/", 
+ "scripts": {
+    "start": "set PORT=6088 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "rsync -avzhe ssh --progress ./build/* /source/company-website/build"
   },
   "eslintConfig": {
     "extends": "react-app"

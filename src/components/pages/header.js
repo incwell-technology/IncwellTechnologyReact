@@ -15,7 +15,7 @@ function Header() {
                     <div className="page1-content">A team of innovative minds incorperated together to innovate something
                         that can help you
                         empower your business.</div>
-                  <a href="#Footer">  <div className="page1-button">GET IN TOUCH</div></a>
+                  <a href="www.incwell.com.np/contact-us" target="_blank">  <div className="page1-button">GET IN TOUCH</div></a>
                 </div>
             </div>
         </div>
