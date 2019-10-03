@@ -4,12 +4,10 @@
     height: -moz-fit-content;
     height: fit-content;
 }
-.main-container{
-    max-width: 1920px;
-}
+.main-container{}
 .contain
 {
-    max-width: 980px; 
+    max-width: 1080px; 
     margin: 0 auto;
     
 }
@@ -50,6 +48,8 @@
 {
     position: relative;
     height:500px;
+    max-width: 1366px;
+    margin: 0 auto;
 }
 .page1-background
 {
@@ -61,20 +61,19 @@
     z-index: 0;
 }
 .page1-bg-left{
-    
-
 }
 .page1-bg-right{
-    
 }
 .left-img-pg1{
-        width: 64%;
+    width: 64%;
     float: left;
     padding-top: 40px;
+    max-height: 40rem;
 }
 .right-img-pg1{
     width: 90%;
     float: right;
+    max-height: 40rem;
 }
 .page1-container
 {
@@ -114,6 +113,7 @@
     background: #24a9f3;
     color: #fff;
     text-align: center;
+    min-height: 48rem;
 }
 .page2-title
 {
@@ -155,12 +155,13 @@
 }
 .page2-grid-texts{
     position: relative;
-    top: 40%;
-
+    top: 50%;
 }
 .page3
 {
     overflow: hidden;
+    max-width: 1366px;
+    margin: 0 auto;
 }
 .page3-title
 {
@@ -207,7 +208,7 @@
 .page3-background-img-container
 {
     position: relative;
-    left: 360px;
+    left: 12rem;
     top: -40px;
     z-index: 0;
 }
@@ -364,22 +365,8 @@ width: 60%;
 
 
 
-@media (max-width: 1919px) {
-    .page3-background-img-container {
-        left: 140px;
-    }
-}
 
-@media (min-width: 768px) and (max-width: 800px) {
-    .page3-background-img-container {
-        left: -77px;
-    }
-    .page3-background-img-container img{
-        width: 70rem;
-    }
-}
-
-@media (max-width: 980px) {
+@media (max-width: 1365px) {
     .right-img-pg1 {
         width: 80%;
         margin-top: 80px;
@@ -404,6 +391,26 @@ width: 60%;
         margin: 0 auto;
     }
 }
+
+@media (max-width: 1200px) {
+    .page3-background-img-container {
+        left: 4vw;
+    }
+
+    .page3-background-img-container img {
+        width: 70vw;
+    }
+}
+
+/* @media (min-width: 768px) and (max-width: 800px) {
+    .page3-background-img-container {
+        left: -77px;
+    }
+
+    .page3-background-img-container img {
+        width: 70rem;
+    }
+} */
 
 @media (max-width: 767px) {
     .left-img-pg1 {
@@ -485,7 +492,6 @@ width: 60%;
     .navibar {
         position: fixed;
         right: 0;
-        top:0;
         width: 100%;
         background-color: #fff;
         z-index: 100;
