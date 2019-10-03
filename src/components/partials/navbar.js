@@ -1,5 +1,6 @@
 import React, {useEffect, useContext, useState} from 'react';
 import logo from '../../static/Images/logo.png';
+import { timeout } from 'q';
 
 function Navbar() {
     const [data, setData] = useState([]);
@@ -53,40 +54,68 @@ let vi = async =>
     const mainContainer = document.querySelector('.main-container');
     const navLinks = document.querySelectorAll('.navlink');
     const navibar = document.querySelector('.navibar');
+    
+    
     let collapsed = true;
-
+    
     const dismissNavbar = () => {
         navbarNav.style.right = '-14rem';
         mainContainer.style.right = '0';
         navibar.style.right = '0';
         collapsed = true;
+        console.log(collapsed);
     };
-
-    navbarToggle.onclick = () => {
+    
+    // navbarToggle.onclick = () => {
+    //     if (collapsed) {
+    //         navbarNav.style.right = '0';
+    //         mainContainer.style.right = '14rem';
+    //         navibar.style.right = '14rem';
+    //         collapsed = false;
+    //     } else {
+    //         dismissNavbar();
+    //     }
+    // };
+    
+    navbarToggle.addEventListener('click', () => {
         if (collapsed) {
             navbarNav.style.right = '0';
             mainContainer.style.right = '14rem';
             navibar.style.right = '14rem';
             collapsed = false;
+            console.log(collapsed)
         } else {
             dismissNavbar();
         }
-    };
-
-
-
+    }, false);
+    
+    
+    
+    // navLinks.forEach(navlink => {
+    //     navlink.onclick = () => {
+    //         dismissNavbar();
+    //     };
+    // });
+    
     navLinks.forEach(navlink => {
-        navlink.onclick = () => {
-            dismissNavbar();
-        };
+        navlink.addEventListener('click', dismissNavbar, false);
     });
-
-    mainContainer.onclick = (e) => {
+    
+    
+    
+    mainContainer.addEventListener('click', (e) => {
         const isNavButton = e.target.classList.value == 'icon-bar' || e.target.classList.value == 'navbar-toggle';
         if (!collapsed && !isNavButton) {
             dismissNavbar();
         }
-    };
+    }, false);
+    
+    // mainContainer.onclick = (e) => {
+    //     const isNavButton = e.target.classList.value == 'icon-bar' || e.target.classList.value == 'navbar-toggle';
+    //     if (!collapsed && !isNavButton) {
+    //         dismissNavbar();
+    //     }
+    // };
 }
       
 export default Navbar;

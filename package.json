@@ -12,8 +12,8 @@
     "react-hook-form": "^3.17.4",
     "react-scripts": "3.0.1"
   },
- "homepage": "https://tech.incwell.com.np/", 
- "scripts": {
+  "homepage": "https://tech.incwell.com.np/",
+  "scripts": {
     "start": "set PORT=6088 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
