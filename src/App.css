@@ -411,6 +411,9 @@ width: 60%;
         width: 95vw;
         max-width: 40rem;
     }
+    .page1 {
+        margin-top: 5rem;
+    }
     .page1-container {
         width: 90%;
         margin: 0 auto;
@@ -476,6 +479,15 @@ width: 60%;
     }
     .main-container {
         position: absolute;
+        right: 0;
+        transition: all 0.5s;
+    }
+    .navibar {
+        position: fixed;
+        right: 0;
+        width: 100%;
+        background-color: #fff;
+        z-index: 100;
         transition: all 0.5s;
     }
     .navbar-nav {
@@ -505,5 +517,4 @@ width: 60%;
     .page5-content-text {
         text-align: justify;
     }
-    
 }

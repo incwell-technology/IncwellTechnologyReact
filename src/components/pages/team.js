@@ -5,7 +5,7 @@ import {ModeContext} from '../../project_mode';
 function Team() {
   const [data, setData] = useState([]);
   const mode = useContext(ModeContext)
-
+  
   useEffect(() => {
     const fetchData = async () => {
      await axios.get(mode+"/api/v1/teams")

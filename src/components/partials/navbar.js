@@ -48,21 +48,46 @@ function Navbar() {
 
 let vi = async =>
 {
-    const navbarToggle = document.getElementsByClassName('navbar-toggle')[0];
-const navbarNav = document.getElementsByClassName('navbar-nav')[0];
-const mainContainer = document.getElementsByClassName('main-container')[0];
+    const navbarToggle = document.querySelector('.navbar-toggle');
+    const navbarNav = document.querySelector('.navbar-nav');
+    const mainContainer = document.querySelector('.main-container');
+    const navLinks = document.querySelectorAll('.navlink');
+    const navibar = document.querySelector('.navibar');
+    let collapsed = true;
 
-let triggered = false;
-navbarToggle.onclick = () => {
-    if (!triggered) {
-    navbarNav.style.right = '0';
-    mainContainer.style.right = '14rem';
-} else {
-    navbarNav.style.right= '-14rem';
-    mainContainer.style.right = '0';
-}
-    triggered = !triggered;
-};
+    const dismissNavbar = () => {
+        navbarNav.style.right = '-14rem';
+        mainContainer.style.right = '0';
+        navibar.style.right = '0';
+        collapsed = true;
+    };
+
+    navbarToggle.onclick = () => {
+        if (collapsed) {
+            navbarNav.style.right = '0';
+            mainContainer.style.right = '14rem';
+            navibar.style.right = '14rem';
+            collapsed = false;
+        } else {
+            dismissNavbar();
+        }
+    };
+
+
+
+    navLinks.forEach(navlink => {
+        navlink.onclick = () => {
+            dismissNavbar();
+        };
+    });
+
+    mainContainer.onclick = (e) => {
+        const isNavButton = e.target.classList.value == 'icon-bar' || e.target.classList.value == 'navbar-toggle';
+        if (!collapsed && !isNavButton) {
+            dismissNavbar();
+        }
+    };
 }
       
 export default Navbar;
+
